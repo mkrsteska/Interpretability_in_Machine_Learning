@@ -49,6 +49,8 @@ The models are trained on the following datasets
 # Future work #
 
 Next steps:
+- restructure the code
+- try out more datasets
 - tuning of hyperparameters
 - implement more complex black-box models 
-- try out more datasets 
+- assemble the main results in one report
