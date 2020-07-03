@@ -1,8 +1,8 @@
 Semester Project - spring 2020 
 
-This repository contains Python implementation of the Surrogate Model on various datasets. 
+**This repository contains Python implementation of the Surrogate Model on various datasets.**
 
-# Overview #
+## Overview ##
 
 Surrogate model is an interpretable machine learning model, that is trained to approximate the behaviour of a well-performing black-box model. The main goal is to build more interpretable models, without decreasing performance. 
 
@@ -21,7 +21,7 @@ Several different surrogate models are trained and compared based on three crite
 
 Finally, the procedure is repeated on several different datasets to explore the impact of the data on the performance of the surrogate models.
 
-# Models #
+## Models ##
 
 The current black-box model is a Neural Network with one hidden layer.
 
@@ -32,7 +32,7 @@ The following models are used as surrogate models:
 - Random Fores
 - Logistic Regression
 
-# Datasets #
+## Datasets ##
 
 The models are trained on the following datasets
 
@@ -44,13 +44,11 @@ The models are trained on the following datasets
 - Rain_Australia https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
 - Telco_Customer_Churn https://www.kaggle.com/blastchar/telco-customer-churn
 
-# Current results #
+## Current results ##
 
-# Future work #
+## Future work ##
 
 Next steps:
-- restructure the code
-- try out more datasets
-- tuning of hyperparameters
+- state current results
 - implement more complex black-box models 
 - assemble the main results in one report
