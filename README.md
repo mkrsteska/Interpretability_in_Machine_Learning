@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# project_surrogate_models
-=======
 Semester Project - spring 2020 
 
 **This repository contains Python implementation of the Surrogate Model on various datasets.**
@@ -55,4 +52,3 @@ Next steps:
 - state current results
 - implement more complex black-box models 
 - assemble the main results in one report
->>>>>>> 88defad931fb402fe2117266472d7dc262a04c35
