@@ -3,7 +3,7 @@
   
   "separate_train_test_file": "False",
     
-  "absolute_path": "../data/clean_data/Rain_Australia.csv",
+  "absolute_path": "/home/mkrsteska/Desktop/project_surrogate_models/data/clean_data/Rain_Australia.csv",
     
   "absolute_path_train": "",
   "absolute_path_test": "",
