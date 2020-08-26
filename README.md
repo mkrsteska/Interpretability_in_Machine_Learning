@@ -66,15 +66,113 @@ The models are trained on the following datasets
 - [Rain Australia](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)
 - [Telco Customer Churn](https://www.kaggle.com/blastchar/telco-customer-churn)
 
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Dataset</th>
+    <th rowspan="2">Number of Instances</th>
+    <th rowspan="2">Number of Instances</th>
+    <th colspan="5">Test Accuracy</th>
+  </tr>
+  <tr>
+    <td>MLP</td>
+    <td>Random Forest</td>
+    <td>KNN</td>
+    <td>Logistic Regression</td>
+    <td>Gaussian NB</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Banknote Authentication</td>
+    <td>1372</td>
+    <td>4</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0.98</td>
+  </tr>
+  <tr>
+    <td>Breast Cancer</td>
+    <td>569</td>
+    <td>31</td>
+    <td>0.97</td>
+    <td>0.97</td>
+    <td>0.94</td>
+    <td>0.97</td>
+    <td>0.93</td>
+  </tr>
+  <tr>
+    <td>Heart Disease</td>
+    <td>303</td>
+    <td>13</td>
+    <td>0.84</td>
+    <td>0.82</td>
+    <td>0.85</td>
+    <td>0.84</td>
+    <td>0.74</td>
+  </tr>
+  <tr>
+    <td>Mushrooms</td>
+    <td>8124</td>
+    <td>22</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0.99</td>
+    <td>0.98</td>
+  </tr>
+  <tr>
+    <td>Rain Australia</td>
+    <td>142193</td>
+    <td>23</td>
+    <td>0.77</td>
+    <td>0.79</td>
+    <td>0.76</td>
+    <td>0.78</td>
+    <td>0.65</td>
+  </tr>
+  <tr>
+    <td>Telco Customer Churn</td>
+    <td>7043</td>
+    <td>20</td>
+    <td>0.74</td>
+    <td>0.77</td>
+    <td>0.74</td>
+    <td>0.76</td>
+    <td>0.41</td>
+  </tr>
+  <tr>
+    <td>Titanic</td>
+    <td>891</td>
+    <td>11</td>
+    <td>/</td>
+    <td>/</td>
+    <td>/</td>
+    <td>/</td>
+    <td>/</td>
+  </tr>
+</tbody>
+</table>
+
 ## Results ##
 
-From the results, it can be seen that for different datasets, different teacher-student combinations perform better or worse. This indicates that this approach is not as general, meaning that not any student can learn from any teacher.
+From the results, the following can be noted:
+- MLPClassifier is not always the best teacher model.
+- Even when MLPClassifier is the best model, it is not always the case that the same model is the best student.
+- For a certain teacher student combination, there is not always an improvement in the student model when trained on the augmented dataset.
+- For different datasets, different teacher-student combinations perform better or worse. This indicates that this approach is not as general, meaning that not any student can learn from any teacher. 
+- For any algorithm, the tuning of hyperparameters is dependent on the dataset. This applies for both the teacher and student models.
+
+Finally, we can conclude that in order to gain valuable results for a particular dataset with this approach, one has to try out many different combinations of teacher and student models. Additionally, it is neccessary to tune the hyperameters according to the chosen dataset.
+
+The main contribution of this project is the framework that enables users to achieve this. Just by changing the config file, the user can try out different teacher-student-dataset combinations and analyze the results in order to find the best possible combination. On one hand, the framework speeds up the process of finding the best model setup for users. On the other hand, it enables users without programming knowledge to test this approach on their problems by using declarative configuration file.
 
 ## Future work ##
 - Implement a more complex black-box teacher model 
-- Test more teacher-student combinations
-- Test more datasets
-- Try conditional teacher-student learning [1]
+- Try more teacher-student combinations can be tested, as well as more datasets 
+- Implement a conditional Teacher-Student model [1]
 
 ## References ##
 [1] Meng, Zhong, et al. "Conditional teacher-student learning." ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2019.
